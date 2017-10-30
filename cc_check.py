@@ -1,4 +1,4 @@
-#!/usr/bin/env python 3
+#!/usr/bin/env python3
 
 """
 cc_check.py
@@ -71,12 +71,12 @@ def cc_check(number):
         return False
 
     if valid_checksum:
-        # Check the length and digits of card to determine card type
+        # MasterCard
         if len(number) == 15 and \
               (number[0] == "3") and \
               (number[1] == "4" or number[1] == "7"):
             return True
-
+        # Amex
         if len(number) == 16 and \
               (number[0] == "5" or number[0] == "2") and \
               (number[1] == "1" or \
@@ -85,13 +85,12 @@ def cc_check(number):
                number[1] == "4" or \
                number[1] == "5"):
             return True
-
+        # Visa
         if (len(number) == 16 or len(number) == 13) and number[0] == "4":
             return True
-
+        # Discover
         if len(number) == 16 and number[0] == "6" and number[1] == "0":
             return True
-
         else:
             return False
 
