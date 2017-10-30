@@ -15,6 +15,7 @@ Example: python3 cc_gen.py MasterCard 100
 """
 
 import sys
+import pathlib
 from random import randint
 from cc_check import cc_check
 
@@ -71,15 +72,13 @@ def cc_gen():
 
         # If Card is Valid And not apart of Valid_Cards
         if cc_check(random_card) and random_card not in Valid_Cards:
-
-            # Add to Valid Cards
             print("Valid {} Generated: {}".format(given, random_card))
             Valid_Cards.append(random_card)
 
-    # Write out to file
-    # Can be set to "w" to reset file each run or "a" to append results each run
+    # Write out to file - Can be set to "w" to reset file or "a" to append file each run
+    pathlib.Path('results').mkdir(parents=True, exist_ok=True)
     filename = given.lower()+"_numbers.txt"
-    with open(filename, "w") as f:
+    with open("./results/"+filename, "a") as f:
         for number in Valid_Cards:
             print(number, file=f)
 
