@@ -1,14 +1,16 @@
+#!/usr/bin/env python 3
+
 """
 cc_gen.py
 ~~~~~~~~~~~
 Python Script to Generate Valid Credit Card Numbers using cc_check.py
 Generates up to max_amount Valid Cards
 
-Usage: python cc_gen.py <card_type>
-Usage: python cc_gen.py <card_type> 100
+Usage: python3 cc_gen.py <card_type>
+Usage: python3 cc_gen.py <card_type> 100
 
-Example: python cc_gen.py Visa
-Example: python cc_gen.py MasterCard 100
+Example: python3 cc_gen.py Visa
+Example: python3 cc_gen.py MasterCard 100
 
 """
 
@@ -18,6 +20,7 @@ from cc_check import cc_check
 
 def cc_gen():
     """ Generates Valid Credit Cards Numbers """
+
     max_amount = 10
     Valid_Cards = []
 

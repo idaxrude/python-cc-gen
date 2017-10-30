@@ -1,10 +1,11 @@
+#!/usr/bin/env python 3
 """
 cc_check.py
 ~~~~~~~~~~~
 Python Script to Check for Valid and Invalid Credit Cards
 
-Usage: python cc_check.py <card_number>
-Example: python cc_check.py 378282246310005
+Usage: python3 cc_check.py <card_number>
+Example: python3 cc_check.py 378282246310005
 
 """
 
@@ -41,21 +42,19 @@ def cc_check(number):
 
     prod1, prod2 = 0, 0
     valid_checksum = False
+
     # Iterate through every other CC Number backwards starting with second to last number
     prod1_start = len(number) - 2
     for i in range(prod1_start, -1, -2):
 
-        # Multiply Number by 2
         doubled = (int(number[i]) * 2)
 
         if doubled > 9:
-            # If doubled number is two digits, add sum digits to prod1
             first_digit = doubled // 10
             second_digit = doubled % 10
             prod1 += (first_digit + second_digit)
 
         else:
-            # If doubled number is not two digits, add to prod1
             prod1 += doubled
 
     # Iterate through every other CC Number backwards start with the last number
@@ -64,8 +63,8 @@ def cc_check(number):
         digit = number[i]
         prod2 += int(digit)
 
+    # Evaluate Checksum
     check_sum = prod1 + prod2
-
     if check_sum % 10 == 0:
         valid_checksum = True
     else:
