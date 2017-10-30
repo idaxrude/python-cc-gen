@@ -1,4 +1,5 @@
 #!/usr/bin/env python 3
+
 """
 cc_check.py
 ~~~~~~~~~~~
@@ -53,7 +54,6 @@ def cc_check(number):
             first_digit = doubled // 10
             second_digit = doubled % 10
             prod1 += (first_digit + second_digit)
-
         else:
             prod1 += doubled
 
