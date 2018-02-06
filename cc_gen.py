@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 cc_gen.py
 ~~~~~~~~~~~
@@ -11,7 +10,6 @@ Usage: python3 cc_gen.py <card_type> 100
 
 Example: python3 cc_gen.py Visa
 Example: python3 cc_gen.py MasterCard 100
-
 """
 
 import sys
