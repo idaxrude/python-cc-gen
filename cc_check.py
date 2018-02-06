@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 cc_check.py
 ~~~~~~~~~~~
@@ -7,12 +6,11 @@ Python Script to Check for Valid and Invalid Credit Cards
 
 Usage: python3 cc_check.py <card_number>
 Example: python3 cc_check.py 378282246310005
-
 """
 
 import sys
 
-def main():
+def cc_check():
 
     # Ensure proper usage
     if len(sys.argv) > 2:
@@ -95,4 +93,4 @@ def cc_check(number):
             return False
 
 if __name__=="__main__":
-    main()
+    cc_check()
