@@ -93,4 +93,4 @@ def cc_check(number):
             return False
 
 if __name__=="__main__":
-    cc_check()
+    cc_check(number)
